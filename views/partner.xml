@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <openerp>
+    <data>
+        <!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="partner_instructor_form_view">
+            <field name="name">partner.instructor</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Sessions">
+                        <group>
+                            <field name="instructor"/>
+                            <field name="session_ids"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="contact_list_action">
+            <field name="name">Contactos</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="employee_list_action">
+            <field name="name">Empleados</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!-- MENU PRINCIPAL -->
+        <menuitem id="organization" name="Organizacion"
+                  parent="main_openacademy_menu"/>
+        <menuitem id="management_system" name="Sistema de gestion"
+                  parent="main_openacademy_menu"/>
+        <menuitem id="human_res" name="Recursos humanos"
+                  parent="main_openacademy_menu"/>
+        <menuitem id="material_res" name="Recursos materiales"
+                  parent="main_openacademy_menu"/>
+        <menuitem id="financee_res" name="Recursos financieros"
+                  parent="main_openacademy_menu"/>
+        <menuitem id="suppliers" name="Proveedores"
+                  parent="main_openacademy_menu"/>
+        <menuitem id="reports" name="Reportes"
+                  parent="main_openacademy_menu"/>
+<!--ORGANIZACION -->
+        <menuitem id="mapeo_procesos" name="Mapeo de procesos"
+                  parent="organization"
+                  action="contact_list_action"/>
+        <menuitem id="organigrama" name="Organigrama"
+                  parent="organization"
+                  action="contact_list_action"/>
+        <menuitem id="logo_menu" name="Logo Oficial"
+                  parent="organization"
+                  action="contact_list_action"/>
+        <menuitem id="plantillas" name="Plantillas"
+                  parent="organization"
+                  action="contact_list_action"/>
+        <menuitem id="foda" name="FODA"
+                  parent="organization"
+                  action="contact_list_action"/>
+        <menuitem id="partes_interesadas" name="Partes interesadas"
+                  parent="organization"
+                  action="contact_list_action"/>
+ <!--SISTEMA DE GESTION -->       
+        <menuitem id="manual_menu" name="Manual de calidad"
+                  parent="management_system"
+                  action="employee_list_action"/>
+        <menuitem id="control_procesos" name="Control de procesos"
+                  parent="management_system"
+                  action="employee_list_action"/>
+        <menuitem id="no_conformidades" name="No conformidades"
+                  parent="management_system"
+                  action="employee_list_action"/>
+        <menuitem id="acciones_correctivas" name="Acciones correctivas"
+                  parent="management_system"
+                  action="employee_list_action"/>
+        <menuitem id="auditorias_internas" name="Auditorias internas"
+                  parent="management_system"
+                  action="employee_list_action"/>
+        <menuitem id="revisiones" name="Revisones de direccion"
+                  parent="management_system"
+                  action="employee_list_action"/>
+        <menuitem id="gestion_riesgos" name="Gestion de riesgos"
+                  parent="management_system"
+                  action="employee_list_action"/>
+<!-- RECURSOS HUMANOS -->
+        <menuitem id="perfiles" name="Perfiles de puestos"
+                  parent="human_res"
+                  action="employee_list_action"/>
+        <menuitem id="employee_menu" name="Empleados"
+                  parent="human_res"
+                  action="employee_list_action"/>
+        <menuitem id="capacitacion_i" name="Capacitacion interna"
+                  parent="human_res"
+                  action="employee_list_action"/>
+        <menuitem id="gestion_conocimiento" name="Gestion del conocimiento"
+                  parent="human_res"
+                  action="employee_list_action"/>
+        <menuitem id="evaluacion_dese" name="Evaluacion del desempenio"
+                  parent="human_res"
+                  action="employee_list_action"/>
+        <menuitem id="encuesta_c_laboral" name="Encuesta del clima laboral"
+                  parent="human_res"
+                  action="employee_list_action"/>
+<!-- RECURSOS MATERIALES -->
+        <menuitem id="inventory_menu" name="Inventario almacen"
+                  parent="material_res"
+                  action="employee_list_action"/>
+        <menuitem id="plan_menu" name="Plan de mantenimiento"
+                  parent="material_res"
+                  action="employee_list_action"/>
+<!--PRESUPUESTO -->       
+        <menuitem id="presupuesto_menu" name="Presupuesto"
+                  parent="financee_res"
+                  action="employee_list_action"/>
+<!--FINANZAS-->
+        <menuitem id="buy_menu" name="Compras"
+                  parent="financee_res"
+                  action="employee_list_action"/>
+<!-- PROVEEDORES -->   
+      <menuitem id="suppliers_menu" name="Listado"
+                  parent="suppliers"
+                  action="employee_list_action"/>
+        <menuitem id="eval_menu" name="Evaluacion"
+                  parent="suppliers"
+                  action="employee_list_action"/>
+<!-- REPORTES -->       
+        <menuitem id="general_report_a" name="Reporte general de auditoria"
+                  parent="reports"
+                  action="employee_list_action"/>
+        <menuitem id="general_report_c" name="Reporte general de capacitacion"
+                  parent="reports"
+                  action="employee_list_action"/>
+        <menuitem id="general_report_des" name="Reporte de desempeo laboral"
+                  parent="reports"
+                  action="employee_list_action"/>
+        <menuitem id="report_ind_pro" name="Reporte indicadores de procesos"
+                  parent="reports"
+                  action="employee_list_action"/>
+
+    </data>
+</openerp>
+
