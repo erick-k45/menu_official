@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+<!-- 
+    <record model="ir.ui.view" id="employee_form_view">
+            <field name="name">employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+           
+      </record>
+      
+-->
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+
+        <record model="ir.actions.act_window" id="employee_list_action">
+            <field name="name">Employee</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first employee
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="department_list_action">
+            <field name="name">Organization</field>
+            <field name="res_model">hr.department</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first department
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="jp_list_action">
+            <field name="name">Job Profiles</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first profile
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="sp_list_action">
+            <field name="name">Selection Process</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first employee
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="ef_list_action">
+            <field name="name">Employee file</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first employee
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="ee_list_action">
+            <field name="name">Employee Evaluation</field>
+            <field name="res_model">hr.skill</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the firt skill
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="tr_list_action">
+            <field name="name">Training</field>
+            <field name="res_model">survey.survey</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the firt survey
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="we_list_action">
+            <field name="name">Working Enviroment</field>
+            <field name="res_model">survey.survey</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the firt survey
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="aw_list_action">
+            <field name="name">Awareness</field>
+            <field name="res_model">employee.orientation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the firt awareness
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="km_list_action">
+            <field name="name">Knowledge management</field>
+            <field name="res_model">document.page</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the firt page
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="pc_list_action">
+            <field name="name">Personal Control, holidays</field>
+            <field name="res_model">hr.holidays</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the firt control
+                </p>
+            </field>
+        </record>
+
+
+
+        <!-- top level menu: no parent -->
+        <menuitem id="main_rh_menu" name="Human resources"/>
+        <menuitem id="oc_menu" name="Organization Chart"
+                  parent="main_rh_menu" action="department_list_action"/>
+        <menuitem id="jp_menu" name="Job Profiles" parent="main_rh_menu"
+                  action="jp_list_action"/>
+        <menuitem id="sc_menu" name="Selection process" parent="main_rh_menu"
+                  action="sp_list_action"/>
+        <menuitem id="ef_menu" name="Employee File" parent="main_rh_menu"
+                  action="ef_list_action"/>
+        <menuitem id="ee_menu" name="Employee Evaluation" parent="main_rh_menu"
+                  action="ee_list_action"/>
+        <menuitem id="tr_menu" name="Training" parent="main_rh_menu"
+                  action="tr_list_action"/>
+        <menuitem id="we_menu" name="Working Enviroment" parent="main_rh_menu"
+                  action="we_list_action"/>
+        <menuitem id="aw_menu" name="Awareness" parent="main_rh_menu"
+                  action="aw_list_action"/>
+        <menuitem id="km_menu" name="Knowledge Management" parent="main_rh_menu"
+                  action="km_list_action"/>
+        <menuitem id="pc_menu" name="Personal Control" parent="main_rh_menu"
+                  action="pc_list_action"/>
+
+
+     </data>
+</openerp>
+

@@ -1,8 +1,20 @@
 # -*- coding: utf-8 -*-
 from openerp import models, fields, api
 
-class Course(models.Model):
-    _name = 'openacademy.course'
+class Empleados(models.Model):
+    _inherit = 'hr.employee'
 
-    name = fields.Char(string="Title", required=True)
-    description = fields.Text()
+class Departamentos(models.Model):
+    _inherit = 'hr.department'
+
+class Skill(models.Model):
+    _inherit = 'hr.skill'
+
+class Encuestas(models.Model):
+    _inherit = 'survey.survey'
+
+class Orientation(models.Model):
+    _inherit = 'employee.orientation'
+
+class Knowledge(models.Model):
+    _inherit = 'document.page'
