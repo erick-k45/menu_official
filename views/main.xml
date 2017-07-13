@@ -276,7 +276,18 @@
 
 
         <!-- top level menu: no parent -->
-        <menuitem id="main_rh_menu" name="Human resources"/>
+       <menuitem id="root_rh_menu" name="Company"/>
+
+       <menuitem id="main_or_menu" name="Organization" parent="root_rh_menu"/>
+       <menuitem id="mi_menu" name="Mision"
+                  parent="main_or_menu" action="department_list_action"/>
+       <menuitem id="vi_menu" name="Vision"
+                  parent="main_or_menu" action="department_list_action"/>
+       <menuitem id="va_menu" name="Valores"
+                  parent="main_or_menu" action="department_list_action"/>
+       <menuitem id="or_menu" name="Politica de Calidad"
+                  parent="main_or_menu" action="department_list_action"/>
+       <menuitem id="main_rh_menu" name="Human resources" parent="root_rh_menu"/>
      
 <!-- organigrama--> 
         <menuitem id="oc_menu" name="Organization Chart"
