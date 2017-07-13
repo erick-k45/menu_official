@@ -106,11 +106,22 @@
             </field>
         </record>
               
-        <record model="ir.actions.act_window" id="we_list_action">
-            <field name="name">Working Enviroment</field>
+        <record model="ir.actions.act_window" id="we_list_action_wes">
+            <field name="name">Working Enviroment Surveys</field>
             <field name="res_model">survey.survey</field>
             <field name="view_type">form</field>
-            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first survey
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="we_list_action_wer">
+            <field name="name">Working Enviroment Reports</field>
+            <field name="res_model">survey.survey</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create the first survey
                 </p>
@@ -301,6 +312,11 @@
 <!-- Clima laboral -->
         <menuitem id="we_menu" name="Working Enviroment" parent="main_rh_menu"
                   action="we_list_action"/>
+        <menuitem id="we_menu_wes" name="Surveys" parent="we_menu"
+                  action="we_list_action_wes"/>
+        <menuitem id="we_menu_wer" name="Reports" parent="we_menu"
+                  action="we_list_action_wer"/>
+
 <!--Toma de conciencia -->
         <menuitem id="aw_menu" name="Awareness" parent="main_rh_menu"/>
         <menuitem id="aw_menu_eo" name="Employee Orientation" parent="aw_menu"
