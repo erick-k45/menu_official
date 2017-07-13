@@ -278,15 +278,47 @@
         <!-- top level menu: no parent -->
        <menuitem id="root_rh_menu" name="Company"/>
 
+       <menuitem id="main_co_menu" name="Company" parent="root_rh_menu"/>
+       <menuitem id="co_mi_menu" name="Mission"
+                  parent="main_co_menu" action="department_list_action"/>
+       <menuitem id="co_vi_menu" name="View"
+                  parent="main_co_menu" action="department_list_action"/>
+       <menuitem id="co_va_menu" name="Values"
+                  parent="main_co_menu" action="department_list_action"/>
+       <menuitem id="co_pc_menu" name="Quality politics"
+                  parent="main_co_menu" action="department_list_action"/>
+
        <menuitem id="main_or_menu" name="Organization" parent="root_rh_menu"/>
-       <menuitem id="mi_menu" name="Mision"
+       <menuitem id="or_mg_menu" name="General process mapping"
                   parent="main_or_menu" action="department_list_action"/>
-       <menuitem id="vi_menu" name="Vision"
+       <menuitem id="or_or_menu" name="Organization chart"
                   parent="main_or_menu" action="department_list_action"/>
-       <menuitem id="va_menu" name="Valores"
+       <menuitem id="or_lo_menu" name="Official logo"
                   parent="main_or_menu" action="department_list_action"/>
-       <menuitem id="or_menu" name="Politica de Calidad"
+       <menuitem id="or_pl_menu" name="Templates"
                   parent="main_or_menu" action="department_list_action"/>
+      <menuitem id="or_fo_menu" name="FODA"
+                  parent="main_or_menu" action="department_list_action"/>
+      <menuitem id="or_pi_menu" name="Concerned parties"
+                  parent="main_or_menu" action="department_list_action"/>
+
+       <menuitem id="main_sg_menu" name="Management System" parent="root_rh_menu"/>
+       <menuitem id="sg_qm_menu" name="Quality manual"
+                  parent="main_sg_menu" action="department_list_action"/>
+       <menuitem id="sg_pc_menu" name="Process Control"
+                  parent="main_sg_menu" action="department_list_action"/>
+       <menuitem id="sg_nc_menu" name="Nonconformities"
+                  parent="main_sg_menu" action="department_list_action"/>
+       <menuitem id="sg_ca_menu" name="Corrective Actions"
+                  parent="main_sg_menu" action="department_list_action"/>
+       <menuitem id="sg_ia_menu" name="Internal Audits"
+                  parent="main_sg_menu" action="department_list_action"/>
+       <menuitem id="sg_mr_menu" name="Management Review"
+                  parent="main_sg_menu" action="department_list_action"/>
+       <menuitem id="sg_rm_menu" name="Risk management"
+                  parent="main_sg_menu" action="department_list_action"/>
+       
+
        <menuitem id="main_rh_menu" name="Human resources" parent="root_rh_menu"/>
      
 <!-- organigrama--> 
@@ -375,6 +407,42 @@
 
         <menuitem id="pc_menu_co" name="Configuration" parent="pc_menu"
                   action="pc_list_action_ab"/>
+
+
+<!--  RECURSOS MATERIALES -->
+
+       <menuitem id="main_mr_menu" name="Material resources" parent="root_rh_menu"/>
+       <menuitem id="mr_in_menu" name="Inventory"
+                  parent="main_mr_menu" action="department_list_action"/>
+       <menuitem id="mr_mp_menu" name="Maintenance plan"
+                  parent="main_mr_menu" action="department_list_action"/>
+
+<!-- RECURSOS FINANCIEROS--> 
+       <menuitem id="main_fr_menu" name="Financial resources" parent="root_rh_menu"/>
+       <menuitem id="fr_bp_menu" name="Budget planning"
+                  parent="main_fr_menu" action="department_list_action"/>
+       <menuitem id="fr_bp_menu" name="Request for materials and services"
+                  parent="main_fr_menu" action="department_list_action"/>
+       <menuitem id="fr_pu_menu" name="Purchases"
+                  parent="main_fr_menu" action="department_list_action"/>
+<!-- PROVEEDORES -->
+
+       <menuitem id="main_su_menu" name="Suppliers" parent="root_rh_menu"/>
+       <menuitem id="su_ls_menu" name="List of suppliers"
+                  parent="main_su_menu" action="department_list_action"/>
+       <menuitem id="su_se_menu" name="Supplier Evaluation"
+                  parent="main_su_menu" action="department_list_action"/>
+<!-- REPORTES -->
+
+  <menuitem id="main_re_menu" name="Reports" parent="root_rh_menu"/>
+       <menuitem id="re_gar_menu" name="General Audit Report"
+                  parent="main_re_menu" action="department_list_action"/>
+       <menuitem id="re_gtr_menu" name="General training report"
+                  parent="main_re_menu" action="department_list_action"/>
+       <menuitem id="re_gjp_menu" name="General job performance report"
+                  parent="main_re_menu" action="department_list_action"/>
+       <menuitem id="re_rpi_menu" name="Report of process indicators"
+                  parent="main_re_menu" action="department_list_action"/>
 
 
      </data>
