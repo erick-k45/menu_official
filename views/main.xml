@@ -310,8 +310,7 @@
         <menuitem id="tr_menu_eo" name="Employee Orientation" parent="tr_menu"
                   action="tr_list_action_eo"/>
 <!-- Clima laboral -->
-        <menuitem id="we_menu" name="Working Enviroment" parent="main_rh_menu"
-                  action="we_list_action"/>
+        <menuitem id="we_menu" name="Working Enviroment" parent="main_rh_menu"/>
         <menuitem id="we_menu_wes" name="Surveys" parent="we_menu"
                   action="we_list_action_wes"/>
         <menuitem id="we_menu_wer" name="Reports" parent="we_menu"
