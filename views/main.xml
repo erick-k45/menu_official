@@ -127,19 +127,22 @@
             </field>
         </record>
         <record model="ir.actions.act_window" id="km_list_action_pa">
-            <field name="name">Page</field>
+            <field name="name">Pages</field>
             <field name="res_model">document.page</field>
+            <field name="domain">[('type','=','content')]</field>
+            <field name="context">{'default_type': 'content'}</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Create the first page
-                </p>
+              <p class="oe_view_nocontent_create">
+                Click to create a new web page.
+              </p>
             </field>
         </record>
-<!--
+
         <record model="ir.actions.act_window" id="km_list_action_ca">
             <field name="name">Category</field>
-            <field name="res_model">document.page.category.tree</field>
+            <field name="res_model">document.page</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
@@ -147,26 +150,18 @@
                 </p>
             </field>
         </record>
--->¿
+¿
         <record model="ir.actions.act_window" id="km_list_action_ph">
             <field name="name">Page History</field>
             <field name="res_model">document.page.history</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Create the first page history
-                </p>
-            </field>
         </record>
         <record model="ir.actions.act_window" id="km_list_action_co">
-            <field name="name">Configuration</field>
+            <field name="name">Configuration Knowledge</field>
             <field name="res_model">knowledge.config.settings</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Create the first page
-                </p>
-            </field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
         </record>
 
         <record model="ir.actions.act_window" id="pc_list_action_da">
@@ -317,9 +312,9 @@
         <menuitem id="km_menu_pa" name="Pages" parent="km_menu"
                   action="km_list_action_pa"/>
         <menuitem id="km_menu_ca" name="Categories" parent="km_menu"
-                  action="km_list_action_pa"/>
+                  action="km_list_action_ca"/>
         <menuitem id="km_menu_ph" name="Page History" parent="km_menu"
-                  action="km_list_action_pa"/>
+                  action="km_list_action_ph"/>
         <menuitem id="km_menu_co" name="Configuration" parent="km_menu"
                   action="km_list_action_co"/>
 
