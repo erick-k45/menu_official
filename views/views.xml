@@ -2,7 +2,14 @@
 <openerp>
     <data>
         <!-- window action -->
-
+ <record model="ir.actions.act_window" id="company_list_action">
+            <field name="name">Company</field>
+            <field name="res_model">company_profile.profile</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+<!--ACCIONES RECURSOS HUMANOS -->
         <record model="ir.actions.act_window" id="employee_list_action">
             <field name="name">Employee</field>
             <field name="res_model">hr.employee</field>

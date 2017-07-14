@@ -18,3 +18,6 @@ class Orientation(models.Model):
 
 class Knowledge(models.Model):
     _inherit = 'document.page'
+
+class company(models.Model):
+    _inherit = 'company_profile.profile'

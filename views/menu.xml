@@ -4,16 +4,8 @@
         <!-- top level menu: no parent -->
        <menuitem id="root_rh_menu" name="Company" web_icon="menu_official,static/description/icon.png"/>
 
-       <menuitem id="main_co_menu" name="Company" parent="root_rh_menu"/>
-       <menuitem id="co_mi_menu" name="Mission"
-                  parent="main_co_menu" action="department_list_action"/>
-       <menuitem id="co_vi_menu" name="View"
-                  parent="main_co_menu" action="department_list_action"/>
-       <menuitem id="co_va_menu" name="Values"
-                  parent="main_co_menu" action="department_list_action"/>
-       <menuitem id="co_pc_menu" name="Quality politics"
-                  parent="main_co_menu" action="department_list_action"/>
-
+       <menuitem id="main_co_menu" name="Company" parent="root_rh_menu" action="company_list_action"/>
+     
        <menuitem id="main_or_menu" name="Organization" parent="root_rh_menu"/>
        <menuitem id="or_mg_menu" name="General process mapping"
                   parent="main_or_menu" action="department_list_action"/>

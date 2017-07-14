@@ -24,7 +24,7 @@
                 'knowledge','org_chart_dept','mgmtsystem',
                 'mgmtsystem_action','mgmtsystem_audit',
                 'mgmtsystem_review','mgmtsystem_hazard',
-                'mgmtsystem_nonconformity'],
+                'mgmtsystem_nonconformity','company_profile'],
 
     # always loaded
     'data': [
