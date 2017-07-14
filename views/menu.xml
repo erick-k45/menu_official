@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- top level menu: no parent -->
+       <menuitem id="root_rh_menu" name="Company" web_icon="menu_official,static/description/icon.png"/>
+
+       <menuitem id="main_co_menu" name="Company" parent="root_rh_menu"/>
+       <menuitem id="co_mi_menu" name="Mission"
+                  parent="main_co_menu" action="department_list_action"/>
+       <menuitem id="co_vi_menu" name="View"
+                  parent="main_co_menu" action="department_list_action"/>
+       <menuitem id="co_va_menu" name="Values"
+                  parent="main_co_menu" action="department_list_action"/>
+       <menuitem id="co_pc_menu" name="Quality politics"
+                  parent="main_co_menu" action="department_list_action"/>
+
+       <menuitem id="main_or_menu" name="Organization" parent="root_rh_menu"/>
+       <menuitem id="or_mg_menu" name="General process mapping"
+                  parent="main_or_menu" action="department_list_action"/>
+       <menuitem id="or_or_menu" name="Organization chart"
+                  parent="main_or_menu" action="department_list_action"/>
+       <menuitem id="or_lo_menu" name="Official logo"
+                  parent="main_or_menu" action="department_list_action"/>
+       <menuitem id="or_pl_menu" name="Templates"
+                  parent="main_or_menu" action="department_list_action"/>
+      <menuitem id="or_fo_menu" name="FODA"
+                  parent="main_or_menu" action="department_list_action"/>
+      <menuitem id="or_pi_menu" name="Concerned parties"
+                  parent="main_or_menu" action="department_list_action"/>
+       
+
+       <menuitem id="main_rh_menu" name="Human resources" parent="root_rh_menu"/>
+     
+<!-- organigrama--> 
+        <menuitem id="oc_menu" name="Organization Chart"
+                  parent="main_rh_menu"/>
+        <menuitem id="oc_menu_de" name="Departments"
+                  parent="oc_menu" action="department_list_action"/>        
+        <menuitem id="oc_menu_oc" name="Organization Chart"
+                  parent="oc_menu" action="department_list_action"/>        
+<!-- Perfiles de trabajo -->
+        <menuitem id="jp_menu" name="Job Profiles" parent="main_rh_menu"
+                  action="jp_list_action"/>
+<!-- Proceso de seleccion -->
+        <menuitem id="sc_menu" name="Selection process" parent="main_rh_menu"
+                  action="sp_list_action"/>
+<!--expediente de empleados -->
+        <menuitem id="ef_menu" name="Employee File" parent="main_rh_menu"/>
+        <menuitem id="ef_menu_el" name="Employee List" parent="ef_menu"
+                  action="ef_list_action"/>
+        <menuitem id="ef_menu_et" name="Employee Tags" parent="ef_menu"
+                  action="ef_list_action_et"/>
+<!--Evaluacion de empleados -->
+        <menuitem id="ee_menu" name="Employee Evaluation" parent="main_rh_menu"/>
+        <menuitem id="ee_menu_sk" name="Skils" parent="ee_menu"
+                  action="ee_list_action"/>
+        <menuitem id="ee_menu_hs" name="Hierrachy of Skils" parent="ee_menu"
+                  action="ee_list_action_hs"/>
+<!-- Capacitacion -->
+        <menuitem id="tr_menu" name="Training" parent="main_rh_menu"/>
+        <menuitem id="tr_menu_ts" name="Training Survey" parent="tr_menu"
+                  action="tr_list_action_ts"/>
+        <menuitem id="tr_menu_eo" name="Employee Orientation" parent="tr_menu"
+                  action="tr_list_action_eo"/>
+<!-- Clima laboral -->
+        <menuitem id="we_menu" name="Working Enviroment" parent="main_rh_menu"/>
+        <menuitem id="we_menu_wes" name="Surveys" parent="we_menu"
+                  action="we_list_action_wes"/>
+        <menuitem id="we_menu_wer" name="Reports" parent="we_menu"
+                  action="we_list_action_wer"/>
+
+<!--Toma de conciencia -->
+        <menuitem id="aw_menu" name="Awareness" parent="main_rh_menu"/>
+        <menuitem id="aw_menu_eo" name="Employee Orientation" parent="aw_menu"
+                  action="aw_list_action"/>
+        <menuitem id="aw_menu_co" name="Courses" parent="aw_menu"
+                  action="aw_list_action"/>
+<!--Gestion de conocimiento -->
+        <menuitem id="km_menu" name="Knowledge Management" parent="main_rh_menu"/>
+        <menuitem id="km_menu_pa" name="Pages" parent="km_menu"
+                  action="km_list_action_pa"/>
+        <menuitem id="km_menu_ca" name="Categories" parent="km_menu"
+                  action="km_list_action_ca"/>
+        <menuitem id="km_menu_ph" name="Page History" parent="km_menu"
+                  action="km_list_action_ph"/>
+        <menuitem id="km_menu_co" name="Configuration" parent="km_menu"
+                  action="km_list_action_co"/>
+
+<!-- Control de personal -->        
+        <menuitem id="pc_menu" name="Personal Control" parent="main_rh_menu"/>
+        <menuitem id="pc_menu_da" name="Dashboard" parent="pc_menu"
+                  action="pc_list_action_da"/>
+
+        <menuitem id="pc_menu_ma" name="Leaves" parent="pc_menu"/>
+        <menuitem id="pc_menu_ma_sa" name="Summary of Leaves" parent="pc_menu_ma"
+                  action="pc_list_action_sa"/>
+        <menuitem id="pc_menu_ma_ar" name="Leave Request" parent="pc_menu_ma"
+                  action="pc_list_action_ar"/>
+        <menuitem id="pc_menu_ma_are" name="Asignement Request" parent="pc_menu_ma"
+                  action="pc_list_action_are"/>
+
+
+
+        <menuitem id="pc_menu_ap" name="Leaves for passing" parent="pc_menu"/>
+        <menuitem id="pc_menu_ap_ab" name="Leaves" parent="pc_menu_ap"
+                  action="pc_list_action_ab"/>
+        <menuitem id="pc_menu_ap_aa" name="Asignement Leaves" parent="pc_menu_ap"
+                  action="pc_list_action_aa"/>
+
+        <menuitem id="pc_menu_re" name="Reports" parent="pc_menu"/>
+        <menuitem id="pc_menu_re_ad" name="Leaves Details" parent="pc_menu_re"
+                  action="pc_list_action_ad"/>
+        <menuitem id="pc_menu_re_ab" name="Leaves" parent="pc_menu_re"
+                  action="pc_list_action_ab"/>
+        <menuitem id="pc_menu_re_da" name="Deparment Leaves" parent="pc_menu_re"
+                  action="pc_list_action_dl"/>
+
+        <menuitem id="pc_menu_co" name="Configuration" parent="pc_menu"
+                  action="pc_list_action_ab"/>
+
+<!--MANAGEMENT SYSTEM -->
+
+       <menuitem id="main_sg_menu" name="Management System" parent="root_rh_menu"/>
+       <menuitem id="sg_qm_menu" name="Quality manual"
+                  parent="main_sg_menu" action="ms_list_action_qm"/>
+       <menuitem id="sg_pc_menu" name="Process Control"
+                  parent="main_sg_menu" action="ms_list_action_pc"/>
+       <menuitem id="sg_nc_menu" name="Nonconformities"
+                  parent="main_sg_menu" action="ms_list_action_nc"/>
+       <menuitem id="sg_ca_menu" name="Corrective Actions"
+                  parent="main_sg_menu" action="ms_list_action_ca"/>
+       <menuitem id="sg_ia_menu" name="Internal Audits"
+                  parent="main_sg_menu" action="ms_list_action_ia"/>
+       <menuitem id="sg_mr_menu" name="Management Review"
+                  parent="main_sg_menu" action="ms_list_action_mr"/>
+       <menuitem id="sg_rm_menu" name="Risk management"
+                  parent="main_sg_menu" action="ms_list_action_rm"/>
+
+
+<!--  RECURSOS MATERIALES -->
+
+       <menuitem id="main_mr_menu" name="Material resources" parent="root_rh_menu"/>
+       <menuitem id="mr_in_menu" name="Inventory"
+                  parent="main_mr_menu" action="department_list_action"/>
+       <menuitem id="mr_mp_menu" name="Maintenance plan"
+                  parent="main_mr_menu" action="department_list_action"/>
+
+<!-- RECURSOS FINANCIEROS--> 
+       <menuitem id="main_fr_menu" name="Financial resources" parent="root_rh_menu"/>
+       <menuitem id="fr_bp_menu" name="Budget planning"
+                  parent="main_fr_menu" action="department_list_action"/>
+       <menuitem id="fr_bp_menu" name="Request for materials and services"
+                  parent="main_fr_menu" action="department_list_action"/>
+       <menuitem id="fr_pu_menu" name="Purchases"
+                  parent="main_fr_menu" action="department_list_action"/>
+<!-- PROVEEDORES -->
+
+       <menuitem id="main_su_menu" name="Suppliers" parent="root_rh_menu"/>
+       <menuitem id="su_ls_menu" name="List of suppliers"
+                  parent="main_su_menu" action="department_list_action"/>
+       <menuitem id="su_se_menu" name="Supplier Evaluation"
+                  parent="main_su_menu" action="department_list_action"/>
+<!-- REPORTES -->
+
+  <menuitem id="main_re_menu" name="Reports" parent="root_rh_menu"/>
+       <menuitem id="re_gar_menu" name="General Audit Report"
+                  parent="main_re_menu" action="department_list_action"/>
+       <menuitem id="re_gtr_menu" name="General training report"
+                  parent="main_re_menu" action="department_list_action"/>
+       <menuitem id="re_gjp_menu" name="General job performance report"
+                  parent="main_re_menu" action="department_list_action"/>
+       <menuitem id="re_rpi_menu" name="Report of process indicators"
+                  parent="main_re_menu" action="department_list_action"/>
+
+
+     </data>
+</openerp>
+

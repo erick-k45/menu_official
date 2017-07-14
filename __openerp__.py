@@ -21,7 +21,10 @@
     # any module necessary for this one to work correctly
     'depends': ['base','hr','hr_holidays','survey',
                 'hr_skill','employee_orientation',
-                'knowledge','org_chart_dept'],
+                'knowledge','org_chart_dept','mgmtsystem',
+                'mgmtsystem_action','mgmtsystem_audit',
+                'mgmtsystem_review','mgmtsystem_hazard',
+                'mgmtsystem_nonconformity'],
 
     # always loaded
     'data': [
@@ -29,7 +32,8 @@
 #       'views/views.xml',
 #       'views/templates.xml',
 #       'views/hr.xml',
-        'views/main.xml',
+        'views/views.xml',
+        'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
