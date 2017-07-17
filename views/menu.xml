@@ -5,7 +5,7 @@
                 <field name="name">Building Page</field>
                 <field name="type">ir.actions.act_url</field>
                 <field name="target">self</field>
-                <field name="url">http://172.17.0.2:8069/report/html/report_not_found </field>
+                <field name="url">http://172.17.0.2:8069/page/building-page</field>
         </record>
 
         <!-- top level menu: no parent -->
