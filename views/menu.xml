@@ -156,13 +156,13 @@
 
   <menuitem id="main_re_menu" name="Reports" parent="root_rh_menu"/>
        <menuitem id="re_gar_menu" name="General Audit Report"
-                  parent="main_re_menu" action="department_list_action"/>
+                  parent="main_re_menu" action="report_not_found"/>
        <menuitem id="re_gtr_menu" name="General training report"
-                  parent="main_re_menu" action="department_list_action"/>
+                  parent="main_re_menu" action="report_not_found"/>
        <menuitem id="re_gjp_menu" name="General job performance report"
-                  parent="main_re_menu" action="department_list_action"/>
+                  parent="main_re_menu" action="report_not_found"/>
        <menuitem id="re_rpi_menu" name="Report of process indicators"
-                  parent="main_re_menu" action="department_list_action"/>
+                  parent="main_re_menu" action="report_not_found"/>
 
 
      </data>

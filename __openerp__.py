@@ -33,6 +33,7 @@
 #       'views/templates.xml',
 #       'views/hr.xml',
         'views/views.xml',
+        'views/advise.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

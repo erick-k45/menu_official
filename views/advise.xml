@@ -1,0 +1,17 @@
+x<openerp>
+<data>
+    <template id="report_not_found">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="report.external_layout">
+                  <div class="page">
+                   <h2>Building page</h2>
+                  </div>   
+                </t>
+            </t>
+        </t>
+    </template>
+</data>
+</openerp>
+
+
