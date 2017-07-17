@@ -1,16 +1,27 @@
-x<openerp>
+<openerp>
 <data>
+
+<report
+        id="report_nf"
+        model="menu.r"
+        string="Building page"
+        name="report_not_found"
+        file="menu_report_not_found"
+        report_type="qweb-html" />
+
     <template id="report_not_found">
         <t t-call="report.html_container">
             <t t-foreach="docs" t-as="o">
                 <t t-call="report.external_layout">
                   <div class="page">
                    <h2>Building page</h2>
-                  </div>   
+                  <p> back please </p>   
+               </div>   
                 </t>
             </t>
         </t>
     </template>
+
 </data>
 </openerp>
 

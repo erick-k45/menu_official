@@ -21,3 +21,6 @@ class Knowledge(models.Model):
 
 class company(models.Model):
     _inherit = 'company_profile.profile'
+
+class Rep(models.Model):
+    _name = 'menu.r'
